@@ -1,0 +1,31 @@
+In this tutorial we will learn how to push to a remote repository in github
+
+NOTE - You cannot create a repository using git bash, you have to manually create one on github and then give remote access to the local machine in which you have files
+
+
+if you are working on an alreay created repo on github
+clone the directory using 
+
+1. git clone https://github.com.... 
+
+get into the directory
+
+2. git config --global user.name "YourUsername"
+3. git config --global user.email "YourEmail"
+4. git init
+5. git add -A
+
+Go to settings of the github account and to the ssh connection
+
+6. ssh-keygen -t ed25519 -C "your_email@example.com"
+7. eval "$(ssh-agent -s)"
+
+8. ssh-add ~/.ssh/id_ed25519
+9. cat ~/.ssh/id_ed25519.pub
+
+Go to settign>SSH> add new ssh key then paste the content of id_ed25519.pub
+
+10. git remote set-url origin YourRepoSSHurl
+11. git push origin master
+
+
