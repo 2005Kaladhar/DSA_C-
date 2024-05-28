@@ -10,6 +10,18 @@
 QUestions for conditional statements
 1. program to print whether no. is +ve -ve or zero
 
+    int x;
+    cout<<"Enter the number : ";
+    cin>> x;
+    if(x>0)
+    {cout<<"THe number is +ve";}
+    else if (x<0)
+    {cout<<"THe number is -ve";}
+    else
+    {cout<<"THe number is zero"<<endl;}
+
+2.
+
 
 
 */
@@ -19,12 +31,15 @@ using namespace std;
 
 int main(){
     int x;
-    cout<<"Enter the number : "<<endl;
+    cout<<"Enter the number : ";
     cin>> x;
 
-    if(x>0){cout<<"THe number is +ve";}
-    else if (x<0){cout<<"THe number is -ve";}
-    else{cout<<"THe number is zero"<<endl;}
+    if(x>0)
+    {cout<<"THe number is +ve";}
+    else if (x<0)
+    {cout<<"THe number is -ve";}
+    else
+    {cout<<"THe number is zero"<<endl;}
 
     
     return 0;
