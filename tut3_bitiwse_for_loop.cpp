@@ -232,14 +232,12 @@ Example :
     cout<<"Reversed : "<<reverse<<endl;
 
 
-7.
-
 */
 #include<iostream>
 
 using namespace std;
+
 int main(){
-    
     cout << (7&3)<<endl;
     return 0;
 }
