@@ -32,7 +32,7 @@ While shifting right the result (in decimal form) will be multiplied by 2
 RIght shifting by 2 position will multiply 2 two times to the original number
 101 = 5(in decimal), 5 >> 1 Result : 10
 
-While shifting left (for small numbers) the result (in decimal form) will be divivded by 2
+While shifting right (for small numbers) the result (in decimal form) will be divivded by 2
 RIght shifting by 2 position will divide 2 two times to the original number
 101 = 5(in decimal), 5 << 1 Result : 2(Quotient)
 
