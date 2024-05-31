@@ -13,12 +13,12 @@ Homework:
 no. of notes problem using switch case 
 
 questions :
-1.calculating nCr - make two functions, one for factorial and other for nCr
-2.even and odd
-3.coutning function
-4.prime number
-5.function to calculate number of set bits in a decimal number
-6.nth fibonaci number
+1. calculating nCr - make two functions, one for factorial and other for nCr
+2. even and odd
+3. coutning function
+4. prime number
+5. function to calculate number of set bits in a decimal number
+6. nth fibonaci number
 
 
 
