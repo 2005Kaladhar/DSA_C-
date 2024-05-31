@@ -74,7 +74,7 @@ Just like time complexity space complexity refres to mathematical relation betwe
 
 For initialisation of a variable space complexity is always O(1)
 In case of a vector in which the size is dynamically alloted based on the given size of the vector therefore here the complexity becomes O(n)
-
+  
 */
 
 
