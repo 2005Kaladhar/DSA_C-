@@ -67,7 +67,7 @@ Algorithm -
             end = mid-1;
         }
     }  
-------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
                                 Binary search INterview Questions
                                 ````````````````````````````````
 
@@ -138,8 +138,9 @@ Code :
     }
 
 Q3. Find the pivot element in the array
-    Ex : {1,2,3,4,5,6,7,8,9} Sorted array
-    Ex : {6,7,8,9,1,2,3,4,5} Sorted and rotated array
+
+    Ex : {1,2,3,4,5,6,7,8,9}  Sorted array
+    Ex : {6,7,8,9,1,2,3,4,5}  Sorted and rotated array
 
     When the graph is plotted for the Sorted rotated array, then the
     (in some questions Maximum, in some questions minimum value) is called the pivot element
@@ -154,13 +155,16 @@ Q3. Find the pivot element in the array
     int end = size-1;
 
     while(start<=end){
+
         int mid= start +(end-start)/2;
 
         //You got the peak value or the minimum value, therefore the pivot element
+
         if( arr[mid]>arr[mid+1] && arr[mid]>arr[mid-1] || !(arr[mid]>arr[mid+1] || arr[mid]>arr[mid-1]) ){
             cout<<"Pivot element : "<<arr[mid]<<" At position: "<<mid<<endl;
             break; 
         }
+
         //You are in the right side, need to move left
         else if(arr[mid]<arr[mid+1]){
             end = mid-1;
@@ -172,13 +176,37 @@ Q3. Find the pivot element in the array
         }
     }
 
-    Problem in my logic : Sometimes give max value, sometimes give min value, cannot decide 
-    `````````````````````
-    
-    Efficeint Code : Graphical approach to this problem
-    ``````````````
-    
 
+    Problem in my logic : Sometimes give max value, sometimes give min value, cannot decide 
+    ```````````````````
+    Efficeint Code : Graphical approach to this problem see the image in this folder
+    ``````````````
+    int size = 7;
+    int arr[]={9,10,91,-2,3,4,5};
+    int start = 0;
+    int end = size-1;
+    
+    while(start<end){
+        int mid = start+(end-start)/2;
+
+        //You are in line 1 the move towards right
+        if(arr[mid]>arr[0]){
+            start = mid+1; // For pivot (min value)
+            start = mid; // For pivot (max value)
+        }
+        //You are in line 2 then move towards left
+        if(arr[mid]<arr[end]){
+            end = mid; // For pivot (min value)
+            end = mid-1; // For pivot(max value)
+        }
+    }
+
+    cout<< "Pivot (min) value is : "<< arr[end] << endl;
+
+
+Doubt questions : What if an array is rotated for monotonic decreasing function ? -> This code doesn't work for it
+                : Here we are taking some elements from last then putting them in front, what if we do taking
+                  some elements from start and then putting them in last ? 
 
 */                                  
 
@@ -186,27 +214,25 @@ Q3. Find the pivot element in the array
 using namespace std;
 
 int main(){
-    int size=7;
-    int arr[]={9,10,1,2,3,4,5};
+    int size = 7;
+    int arr[]={9,10,91,-2,3,4,5};
     int start = 0;
     int end = size-1;
+    
+    while(start<end){
+        int mid = start+(end-start)/2;
 
-    while(start<=end){
-        int mid= start +(end-start)/2;
-
-        //You got the peak value or the minimum value, therefore the pivot element
-        if( arr[mid]>arr[mid+1] && arr[mid]>arr[mid-1] || !(arr[mid]>arr[mid+1] || arr[mid]>arr[mid-1]) ){
-            cout<<"Pivot element : "<<arr[mid]<<" At position: "<<mid<<endl;
-            break; 
+        //You are in line 1 the move towards right
+        if(arr[mid]>arr[0]){
+            start = mid+1;
         }
-        //You are in the right side, need to move left
-        else if(arr[mid]<arr[mid+1]){
-            end = mid-1;
-        }
-
-        //You are in left need to move right
-        else if(arr[mid]>arr[mid-1]){
-            start=mid+1;
+        //You are in line 2 then move towards left
+        if(arr[mid]<arr[end]){
+            end = mid;
         }
     }
+
+    cout<< "Pivot (min) value is : "<< arr[end] << endl;
+
 }
+
