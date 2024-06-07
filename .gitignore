@@ -1,5 +1,5 @@
 # Working directory or working tree is the folder in your local machine that you are working in and local respository is the .git folder in which all the "tracked" files are present of your working tree, git fetch gets the changes from the remote repo and saves it to the local repo but does not merge it with the working directory so additionally we have to run 'git merge' to have those files in the working tree, whereas 'git pull' gets the changes from the remote repo and make changes accordingly in the working directory
-
+  
 *
 !*.*
 !*/
